@@ -6,8 +6,7 @@
         {% block stylesheets %} <link rel="stylesheet" href="{{ asset("css/style.css") }}">{% endblock %}
     </head>
     <body>
-        {% block header %}<h1>Le bon blog</h1>{% endblock %}
+        <header>{% block header %}<h1>Le bon blog</h1>{% endblock %}</header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
-</html>

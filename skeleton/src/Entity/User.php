@@ -38,10 +38,6 @@ class User
      */
     private $idRole;
 
-    /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="user")
-     */
-    private $comments;
 
 
 
@@ -104,39 +100,5 @@ class User
 
         return $this;
     }
-
-    /**
-     * @return Collection|Comments[]
-     */
-    public function getComments(): Collection
-    {
-        return $this->comments;
-    }
-
-    public function addComment(Comments $comment): self
-    {
-        if (!$this->comments->contains($comment)) {
-            $this->comments[] = $comment;
-            $comment->setUser($this);
-        }
-
-        return $this;
-    }
-
-    public function removeComment(Comments $comment): self
-    {
-        if ($this->comments->contains($comment)) {
-            $this->comments->removeElement($comment);
-            // set the owning side to null (unless already changed)
-            if ($comment->getUser() === $this) {
-                $comment->setUser(null);
-            }
-        }
-
-        return $this;
-    }
-
-
-
 
 }
