@@ -6,7 +6,12 @@
         {% block stylesheets %} <link rel="stylesheet" href="{{ asset("css/style.css") }}">{% endblock %}
     </head>
     <body>
-        <header>{% block header %}<h1>Le bon blog</h1>{% endblock %}</header>
+        <header>{% block header %}
+                <h1>Le bon blog</h1>
+                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                    <p> <b>Bonjour {{ app.user.username }} </b> <a href=" {{ logout_path('main') }} ">Déconection</a></p>
+                {% endif %}
+            {% endblock %}</header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>

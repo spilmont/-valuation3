@@ -3,14 +3,15 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User
-{
+class User implements UserInterface, \Serializable {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -99,6 +100,46 @@ class User
         $this->idRole = $idRole;
 
         return $this;
+    }
+
+    public function  getRoles()
+    {
+        if($this->idRole == 1)
+            return ["ROLE_ADMIN"];
+        elseif ($this->idRole == 2)
+            return ["ROLE_USER"];
+        else
+            return [];
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function serialize()
+    {
+        return serialize(array(
+            $this->id,
+            $this->username,
+            $this->email,
+            $this->password,
+        ));
+
+    }
+    public function unserialize($serialized)
+    {
+        list (
+            $this->id,
+            $this->username,
+            $this->email,
+            $this->password,
+            ) = unserialize($serialized);
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 
 }

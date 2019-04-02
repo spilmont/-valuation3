@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block header %}
+    <h1>Le bon blog</h1>
+    <form action="{{ path('login') }}" method="post">
+        <label for="username">pseudo : </label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}">
+
+        <label for="password">mot de passe : </label>
+        <input type="password" id="password" name="_password">
+
+        <button type="submit">connection</button>
+    </form>
+
+    {% if error %}
+    <div id="error" >pseudo ou mot de passe incorect</div>
+{% endif %}
+{% endblock %}
+{% block body %}
+
+
+
+{% endblock %}
