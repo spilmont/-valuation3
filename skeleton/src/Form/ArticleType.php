@@ -23,4 +23,9 @@ class ArticleType extends AbstractType
             'data_class' => Article::class,
         ]);
     }
+
+    public function getName()
+    {
+        return 'article';
+    }
 }

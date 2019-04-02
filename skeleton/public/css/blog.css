@@ -1,0 +1,28 @@
+h1{text-align: center;
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    background-color: #7790b0;
+    color: white;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+#article-main{
+    border: yellow outset;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    display: inline-block;
+    width: 40%;
+}
+
+@media(max-width: 555px) {
+    #article-main{
+        display: block;
+    }
+
+}

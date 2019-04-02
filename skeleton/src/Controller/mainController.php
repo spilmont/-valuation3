@@ -26,7 +26,7 @@ public function homepage(Request $request, AuthenticationUtils $authenticationUt
         return $this->redirectToRoute('show_user');
     }
     if (true === $this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
-        //return $this->redirectToRoute('user', ['lastname' => $this->getUser()->getLastname(),]);
+        return $this->redirectToRoute('blog');
     } else {
         return $this->render('homepage.html.twig', [
             'last_username' => $lastUsername,
