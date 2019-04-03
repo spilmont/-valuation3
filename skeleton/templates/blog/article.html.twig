@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset("css/blog.css") }}"> {% endblock %}
+{% block body %}
+
+    <h1>{{ article.title }}</h1>
+
+    {{ article.description }}<hr>
+
+    <div id="main-comment">
+        <div id="comment">
+            {{ form(form) }}
+
+            {% for comment in comments %}
+                {{ comment.user }}: <br>
+                {{ comment }}<hr>
+            {% endfor %}
+        </div>
+    </div>
+
+
+  {% endblock %}

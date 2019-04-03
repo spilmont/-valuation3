@@ -7,8 +7,8 @@
 
 
     {% for article in articles %}
-        <div id="article-main{{ article.id }}">
-            <div id="articile-title">
+        <div class="article-main" id="article-main{{ article.id }}">
+            <div  id="articile-title">
                 <h2>{{ article.title }}</h2>
             </div>
             <div id="article-description">
@@ -23,7 +23,7 @@
     {% for article in articles %}
     document.getElementById('article-main{{ article.id }}').addEventListener("click", function () {
 
-        document.getElementById('article-main{{ article.id }}').style.display ="none";
+        document.location.href= "/blog/article{{ article.id }}";
 
     });
     {% endfor %}

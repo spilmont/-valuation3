@@ -12,16 +12,25 @@ body{
     background-color: black;
     color: white;
 }
-#article-main{
+.article-main{
     border: yellow outset;
     margin-bottom: 15px;
     margin-right: 15px;
     display: inline-block;
     width: 40%;
 }
+.article-main:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    color: yellow;
+}
 
 @media(max-width: 555px) {
-    #article-main{
+    .article-main{
         display: block;
     }
 
