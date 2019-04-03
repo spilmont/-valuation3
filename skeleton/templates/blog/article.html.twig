@@ -17,10 +17,12 @@
             {{ form(form) }}
             </div>
            <hr>
+            <div id="commentaire">
             {% for comment in comments %}
                 {{ comment.user }} le {{ comment.date }}: <br>
                 {{ comment }}<hr>
             {% endfor %}
+        </div>
         </div>
     </div>
 

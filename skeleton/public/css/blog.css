@@ -82,3 +82,41 @@ hr {
 
     }
 }
+.button-header{
+    background-color: white;
+    color: #7790b0;
+}
+#but{
+    text-align: center;
+
+}
+a{
+
+    background-color: #7790b0;
+    color: white;
+    padding: 2px 4px 2px 4px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+button{
+
+    background-color: #7790b0;
+    color: white;
+    padding: 2px 4px 2px 4px;
+    border-radius: 15px;
+    border: none;
+
+}
+
+textarea{
+
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#commentaire{
+
+}

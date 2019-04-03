@@ -34,7 +34,10 @@ table{
     text-align: center;
 }
 
-#deconnection{
+.button-header{
     background-color: white;
     color: #7790b0;
+}
+#but{
+    text-align: center;
 }

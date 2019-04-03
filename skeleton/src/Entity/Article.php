@@ -29,7 +29,7 @@ class Article
     private $description;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="article")
+     * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="article",cascade={"persist", "remove"})
      */
     private $comments;
 

@@ -41,7 +41,7 @@ class User implements UserInterface, \Serializable {
     private $idRole;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="user")
+     * @ORM\OneToMany(targetEntity="App\Entity\Comments", mappedBy="user",cascade={"persist", "remove"})
      */
     private $comments;
 

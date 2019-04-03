@@ -51,7 +51,7 @@ class blogController extends AbstractController
 
         $form = $this->createFormBuilder($commentaire)
             ->add('comment',TextareaType::class)
-            ->add('save',SubmitType::class)
+            ->add('commenter',SubmitType::class)
             ->getForm();
 
 
