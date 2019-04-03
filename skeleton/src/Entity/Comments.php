@@ -26,10 +26,23 @@ class Comments
      */
     private $article;
 
+
+
     /**
      * @ORM\Column(type="text")
      */
     private $Comment;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $date;
+
+    public function __construct()
+    {
+       $this->date = date('d/m/Y à H:i:s',time());
+    }
+
 
     public function getId(): ?int
     {
@@ -74,5 +87,17 @@ class Comments
     public function __toString()
     {
         return $this->getComment();
+    }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(string $date): self
+    {
+        $this->date = $date;
+
+        return $this;
     }
 }

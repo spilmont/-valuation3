@@ -5,15 +5,20 @@
 {% block body %}
 
     <h1>{{ article.title }}</h1>
+    <h5>posté le {{ article.date }}</h5>
 
-    {{ article.description }}<hr>
-
+    <div id="contenu-article">
+     <img id="image-article" src="{{ article.image }}">
+    <div id="article-cont">{{ article.contenu }}</div>
+    </div>
     <div id="main-comment">
         <div id="comment">
+            <div id="comment-form">
             {{ form(form) }}
-
+            </div>
+           <hr>
             {% for comment in comments %}
-                {{ comment.user }}: <br>
+                {{ comment.user }} le {{ comment.date }}: <br>
                 {{ comment }}<hr>
             {% endfor %}
         </div>

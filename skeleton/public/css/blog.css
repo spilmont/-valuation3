@@ -1,37 +1,84 @@
-h1{text-align: center;
+h1, h5 {
+    text-align: center;
 }
 
-header{
+header {
     width: 100%;
     height: 150px;
     background-color: #7790b0;
     color: white;
+    margin-bottom: 20px;
 }
 
-body{
+body {
     background-color: black;
     color: white;
 }
-.article-main{
+
+.article-main {
     border: yellow outset;
     margin-bottom: 15px;
     margin-right: 15px;
     display: inline-block;
     width: 40%;
+    height: 150px;
 }
-.article-main:hover{
+
+.article-main:hover {
     background-color: white;
     color: black;
     cursor: pointer;
 }
-hr{
+
+hr {
     width: 90%;
     color: yellow;
 }
 
-@media(max-width: 555px) {
-    .article-main{
-        display: block;
-    }
+#comment-form {
+    text-align: center;
+}
 
+#article {
+    text-align: center;
+}
+
+#image-article {
+
+    width: 300px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+#contenu-article {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+#article-cont {
+    display: inline-block;
+    width: 35%;
+
+
+}
+
+@media (max-width: 775px) {
+
+
+    .article-main {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+@media (max-width: 1000px) {
+
+    #article-cont{
+        width: 100%;
+
+    }
 }

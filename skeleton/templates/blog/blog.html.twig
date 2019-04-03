@@ -5,7 +5,7 @@
 
 {% block body %}
 
-
+    <div id="article">
     {% for article in articles %}
         <div class="article-main" id="article-main{{ article.id }}">
             <div  id="articile-title">
@@ -16,7 +16,7 @@
             </div>
         </div>
     {% endfor %}
-
+    </div>
 {% endblock %}
 {% block javascripts %}<script>
 

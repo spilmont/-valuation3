@@ -8,3 +8,33 @@ header{
     color: white;
 
 }
+
+a{
+
+    background-color: #7790b0;
+    color: white;
+    padding: 2px 4px 2px 4px;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+button{
+
+    background-color: #7790b0;
+    color: white;
+    padding: 2px 4px 2px 4px;
+    border-radius: 15px;
+    border: none;
+
+
+}
+table{
+
+    text-align: center;
+}
+
+#deconnection{
+    background-color: white;
+    color: #7790b0;
+}
