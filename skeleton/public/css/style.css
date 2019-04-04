@@ -9,6 +9,11 @@ header{
 
 }
 
+.button-header{
+    background-color: white;
+    color: #7790b0;
+}
+
 a{
 
     background-color: #7790b0;

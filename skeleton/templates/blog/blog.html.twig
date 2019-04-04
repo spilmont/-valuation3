@@ -9,7 +9,7 @@
     {% for article in articles %}
         <div class="article-main" id="article-main{{ article.id }}">
             <div  id="articile-title">
-                <h2>{{ article.title }}</h2>
+                <h2>{{ article.title }} <h5>posté le {{ article.date }}</h5></h2>
             </div>
             <div id="article-description">
                 {{ article.description }}
