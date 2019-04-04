@@ -13,8 +13,7 @@ class CommentsType extends AbstractType
     {
         $builder
             ->add('Comment')
-            ->add('user')
-            ->add('article')
+
         ;
     }
 

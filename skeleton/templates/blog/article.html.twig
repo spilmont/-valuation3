@@ -20,7 +20,14 @@
             <div id="commentaire">
             {% for comment in comments %}
                 {{ comment.user }} le {{ comment.date }}: <br>
-                {{ comment }}<hr>
+                {{ comment }}
+                {% if comment.user == app.user.username %}
+                    <div id="link-comments">
+                <a href="{{ path('comments_edit',{"id":comment.id}) }}"> modifier</a>
+                <a href="{{ path('comments_delete',{'id':comment.id}) }}">supprimer</a>
+                    </div>
+                {% endif %}
+                <hr>
             {% endfor %}
         </div>
         </div>

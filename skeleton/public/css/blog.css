@@ -25,8 +25,7 @@ body {
 }
 
 .article-main:hover {
-    background-color: white;
-    color: black;
+    background-color: rgba(157, 157, 157, 0.4);
     cursor: pointer;
 }
 
@@ -119,4 +118,12 @@ textarea{
 
 #commentaire{
 
+}
+#link-comments{
+    float: right ;
+}
+#formulaire{
+    margin: auto;
+    width: 10%;
+    text-align: center;
 }

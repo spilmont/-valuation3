@@ -12,20 +12,21 @@ namespace App\Controller;
 use App\Entity\Article;
 use App\Entity\Comments;
 
+use App\Entity\User;
+use App\Form\CommentsType;
+use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/blog")
- */
+
 class blogController extends AbstractController
 {
     /**
      * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/",name="blog")
+     * @Route("/blog",name="blog")
      */
     public function blogPage(){
 
@@ -37,7 +38,7 @@ class blogController extends AbstractController
     }
 
     /**
-     * @Route("/article{idArticle}",name="blog_article")
+     * @Route("/blog/article{idArticle}",name="blog_article")
      */
     public  function articlePage(Request $request,$idArticle){
 
@@ -77,5 +78,29 @@ class blogController extends AbstractController
 
     }
 
+    /**
+     * @Route("/inscription",name="inscription")
+     */
+    public  function  inscription(Request $request){
+
+        $user = new User();
+
+        $form = $this->createForm(UserType::class,$user)
+            ->remove('idRole');
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            $user->setIdRole(2);
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+        }
+
+        return $this->render('blog/inscription.html.twig',["inscription"=>$form->createView()]);
+
+    }
 
 }

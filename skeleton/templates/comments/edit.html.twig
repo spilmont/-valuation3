@@ -2,12 +2,18 @@
 
 {% block title %}Edit Comments{% endblock %}
 
+
+{% if is_granted('ROLE_USER') %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset("css/blog.css") }}"> {% endblock %}
+{% endif %}
+
 {% block body %}
-    <h1>Edit Comments</h1>
+    <h1>modifier commentaire</h1>
 
     {{ include('comments/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('comments_index') }}">back to list</a>
 
-    {{ include('comments/_delete_form.html.twig') }}
+
+
 {% endblock %}
