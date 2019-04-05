@@ -13,7 +13,6 @@ use App\Entity\Article;
 use App\Entity\Comments;
 
 use App\Entity\User;
-use App\Form\CommentsType;
 use App\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
