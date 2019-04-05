@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Comments index{% endblock %}
+{% block title %}Panneau des commentaire{% endblock %}
 
 {% block body %}
-    <h1>Comments index</h1>
+    <h1>panneau des commentaire</h1>
 
     <a href="{{ path('show_user') }}"> utilisateur</a>
     <a href="{{ path('article_index') }}">Articles</a>
@@ -13,8 +13,8 @@
             <tr>
                 <th>Id</th>
                 <th>article</th>
-                <th>user</th>
-                <th>Comment</th>
+                <th>Utilisateur</th>
+                <th>comentaire</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -32,7 +32,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="3">no records found</td>
+                <td colspan="3">pas de commentaire enregistrer</td>
             </tr>
         {% endfor %}
         </tbody>
