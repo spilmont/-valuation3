@@ -51,7 +51,7 @@ class blogController extends AbstractController
         $comment = $repoComments->findBy(["article"=>$idArticle],["id"=>"DESC"]);
 
         $form = $this->createFormBuilder($commentaire)
-            ->add('comment',TextareaType::class)
+            ->add('comment',TextareaType::class,["label"=>false])
             ->add('commenter',SubmitType::class)
             ->getForm();
 

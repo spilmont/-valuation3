@@ -1,22 +1,27 @@
 {% extends 'base.html.twig' %}
 
+ {% block stylesheets %} <link rel="stylesheet" href="{{ asset("css/blog.css") }}">{% endblock %}
 
 {% block header %}
     <h1>Le bon blog</h1>
     <form action="{{ path('login') }}" method="post">
+        <div id="name">
         <label for="username">pseudo : </label>
         <input type="text" id="username" name="_username" value="{{ last_username }}">
-
+        </div>
+        <div id="pass">
         <label for="password">mot de passe : </label>
         <input type="password" id="password" name="_password">
-
-        <button class="button-header" type="submit">connection</button>
+        </div>
+        <div id="but-log">
+        <button class="button-header" type="submit">connection</button> <a class="button-header" href="{{ path('inscription') }}">inscription</a>
+        </div>
     </form>
 
     {% if error %}
     <div id="error" >pseudo ou mot de passe incorect</div>
 {% endif %}
-    <a class="button-header" href="{{ path('inscription') }}">inscription</a>
+
 {% endblock %}
 {% block body %}
 

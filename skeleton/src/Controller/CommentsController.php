@@ -58,9 +58,7 @@ class CommentsController extends AbstractController
             $entityManager->flush();
 
 
-        if ($this->isGranted('ROLE_ADMIN'))
-            return $this->redirectToRoute('comments_index');
-        else
+
             return $this->redirectToRoute('blog_article', [
                 'idArticle'=>$comment->getArticle()->getId()]);
 

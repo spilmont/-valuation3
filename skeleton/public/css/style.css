@@ -15,6 +15,10 @@ header{
     color: #7790b0;
 }
 
+textarea{
+    border-radius: 20px;
+}
+
 a{
 
     background-color: #7790b0;
@@ -54,7 +58,8 @@ table{
 
 #formulaire{
   margin: auto;
-    width: 10%;
+    width: 8%;
+
 }
 
 button{
@@ -65,4 +70,38 @@ input{
     margin-top: 5px;
     border-radius: 15px;
     text-align: center;
+}
+.new{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.edit{
+    padding: 0;
+}
+
+.show{
+    display: none;
+}
+
+#edit{
+    background-color: white;
+    color: black;
+    cursor: auto;
+}
+
+@media (max-width :361px ) {
+
+    .hide{
+        display:none;
+    }
+    .show{
+        display: block;
+    }
+    #edit{
+        cursor: pointer;
+        color: #0000F0;
+
+    }
+    
 }

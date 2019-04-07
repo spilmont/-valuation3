@@ -21,7 +21,7 @@ body {
     margin-right: 15px;
     display: inline-block;
     width: 40%;
-    height: 150px;
+    
 }
 
 .article-main:hover {
@@ -39,6 +39,12 @@ hr {
 }
 
 #article {
+    text-align: center;
+}
+
+input{
+    margin-top: 5px;
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -62,6 +68,15 @@ hr {
 
 
 }
+#name{
+    display: inline;
+}
+#pass{
+    display: inline;
+}
+#but-log{
+    display: inline;
+}
 
 @media (max-width: 775px) {
 
@@ -70,8 +85,20 @@ hr {
         display: block;
         margin-left: auto;
         margin-right: auto;
-
     }
+    #name{
+        display: block;
+        margin-left: 40px;
+    }
+    #pass{
+        display: block;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+    #but-log{
+        margin-left: 100px;
+    }
+
 }
 
 @media (max-width: 1000px) {
